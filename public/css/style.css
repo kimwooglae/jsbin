@@ -1807,9 +1807,9 @@ a.active:hover {
 #console { bottom: 35px; left: 0; right: 0; width: 100%; margin-bottom: 35px; overflow: auto; /*border-bottom: 1px solid #5B5C5B;*/ }
 
 #output { list-style: none; margin: 0; padding: 0; }
-#output li { margin: 5px 0; padding: 5px; border-top: 1px solid #EEEFEE; white-space: pre-wrap; padding-bottom: 0; }
+#output li { margin: 1px 0; padding: 2px; border-top: 1px solid #EEEFEE; white-space: pre-wrap; padding-bottom: 0; }
 #output li:last-child { border-bottom: 0;}
-#output > li > div { margin-left: 20px; line-height: 20px; }
+#output > li > div { margin-left: 10px; line-height: 14px; font-size: 12px}
 #console span.gutter { float: left; display: block; width: 5px; }
 
 #output li div { position: relative; }
@@ -1915,7 +1915,7 @@ a.active:hover {
 
 /* font size control */
 /*#console { top: 35px; bottom: 35px; }*/
-#output li, #exec, .fakeInput { min-height: 20px; font-size: 14px; font-family: SourceCodeProRegular, "Menlo", consolas, monospace; }
+#output li, #exec, .fakeInput { min-height: 15px; font-size: 14px; font-family: SourceCodeProRegular, "Menlo", consolas, monospace; }
 
 /** Pretty printing styles. Used with prettify.js. */
 

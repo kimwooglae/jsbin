@@ -7,7 +7,7 @@ var jshint = function () {
   return ok ? true : JSHINT.data();
 };
 
-var jshintEnabled = true;
+var jshintEnabled = false;
 
 var detailsSupport = 'open' in document.createElement('details');
 

@@ -47,8 +47,8 @@
           </div>
         </div><!-- spacer (or not) DO NOT TOUCH ERE BE DRAGONS etc wat?
      --><div class="menu">
-          <span class="button group">Add library
-          <select id="library"></select>
+        <span class="button group">WebSquare &amp; JavaScript
+        <select style="width:170px" id="library"></select>
           </span>
         </div><div id="sharemenu" class="menu {{^code_id}}hidden{{/code_id}}">
           <a href="#share" class="button button-dropdown group">Share</a>
@@ -115,7 +115,7 @@
                     {{^user.github_token}}
                     <div>
                       <span class="login-splitter">or</span>
-                      <a class="btn-github" href="/auth/github"><img src="{{static}}/images/github-32.png"> Link your Github account</a>
+                      <a class="btn-github" href="{{code_id_path}}/auth/github"><img src="{{static}}/images/github-32.png"> Link your Github account</a>
                     </div>
                     {{/user.github_token}}
                   </form>
@@ -166,7 +166,7 @@
                       </div>
                       <div>
                         <span class="login-splitter">or</span>
-                        <a title="To sign in using Github and export gists to your Github profile" class="btn-github" href="/auth/github"><img src="{{static}}/images/github-32.png"> Sign in with Github</a>
+                        <a title="To sign in using Github and export gists to your Github profile" class="btn-github" href="{{code_id_path}}/auth/github"><img src="{{static}}/images/github-32.png"> Sign in with Github</a>
                       </div>
                     </form>
                   </div>
@@ -194,7 +194,7 @@
                       </div>
                       <div>
                         <span class="login-splitter">or</span>
-                        <a class="btn-github" href="/auth/github"><img src="{{static}}/images/github-32.png"> Register with Github</a>
+                        <a class="btn-github" href="{{code_id_path}}/auth/github"><img src="{{static}}/images/github-32.png"> Register with Github</a>
                       </div>
                     </form>
                   </div>
@@ -230,31 +230,14 @@
   </div>
   <div id="panelswaiting">
     <div class="code stretch html panel">
-      <div class="label menu"><span class="name"><strong><a href="#htmlprocessors" class="fake-dropdown button-dropdown">HTML</a></strong></span><div class="dropdown" id="htmlprocessors">
-          <div class="dropdownmenu processorSelector" data-type="html">
-            <a href="#html">HTML</a>
-            <a href="#markdown">Markdown</a>
-            <a href="#jade">Jade</a>
-            <a href="#convert">Convert to HTML</a>
-          </div>
-        </div>
+      <div class="label menu"><span class="name"><strong><a href="#htmlprocessors" class="fake-dropdown button-dropdown">HTML</a></strong></span>
       </div>
       <div class="editbox">
         <textarea spellcheck="false" autocapitalize="none" autocorrect="off" id="html"></textarea>
       </div>
     </div>
     <div class="code stretch javascript panel">
-      <div class="label menu"><span class="name"><strong><a  class="fake-dropdown button-dropdown" href="#javascriptprocessors">JavaScript</a></strong></span>
-        <div class="dropdown" id="javascriptprocessors">
-          <div class="dropdownmenu processorSelector" data-type="javascript">
-            <a href="#javascript">JavaScript</a>
-            <a href="#coffeescript">CoffeeScript</a>
-            <a href="#processing">Processing</a>
-            <a href="#traceur">Traceur</a>
-            <a href="#typescript">TypeScript</a>
-            <a href="#convert">Convert to JavaScript</a>
-          </div>
-        </div>
+      <div class="label menu"><span class="name"><strong><a  class="fake-dropdown button-dropdown" href="#javascriptprocessors">WebSquare XML</a></strong></span>
       </div>
       <div class="editbox">
         <textarea spellcheck="false" autocapitalize="none" autocorrect="off" id="javascript"></textarea>
@@ -262,14 +245,6 @@
     </div>
     <div class="code stretch css panel">
       <div class="label menu"><span class="name"><strong><a class="fake-dropdown button-dropdown" href="#cssprocessors">CSS</a></strong></span>
-        <div class="dropdown" id="cssprocessors">
-          <div class="dropdownmenu processorSelector" data-type="css">
-            <a href="#css">CSS</a>
-            <a href="#less">LESS</a>
-            <!-- <a href="#stylus">Stylus</a> --><!-- Removed because of a crash bug in stylus https://twitter.com/phuunet/status/377735455670030336 -->
-            <a href="#convert">Convert to CSS</a>
-          </div>
-        </div>
       </div>
       <div class="editbox">
         <textarea spellcheck="false" autocapitalize="none" autocorrect="off" id="css"></textarea>
@@ -291,8 +266,7 @@
         <span class="name"><strong>Output</strong></span>
         <span class="options">
           <button id="runwithalerts" title="ctrl + enter
-Include alerts, prompts &amp; confirm boxes">Run with JS</button>
-          <label>Auto-run JS<input type="checkbox" id="enablejs"></label>
+Include alerts, prompts &amp; confirm boxes">Run WebSquare</button>
           <a target="_blank" title="Live preview" id="jsbinurl" class="{{^code_id}}hidden{{/code_id}}" href="{{code_id_path}}"><img src="{{static}}/images/popout.png"></a>
         </span>
         <span class="size"></span>

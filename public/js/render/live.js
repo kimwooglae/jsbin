@@ -88,10 +88,10 @@ function codeChangeLive(event, data) {
             codeChangeLive(event, data);
           }, 1000);
         } else {
-          throttledPreview();
+//          throttledPreview();
         }
       } else {
-        throttledPreview();
+//        throttledPreview();
       }
     }
   }

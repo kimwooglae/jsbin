@@ -116,7 +116,7 @@ var processors = jsbin.processors = (function () {
 
     javascript: createProcessor({
       id: 'javascript',
-      extensions: ['js']
+      extensions: ['xml']	// websquare xml
     }),
 
     coffeescript: createProcessor({

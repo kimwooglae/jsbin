@@ -275,13 +275,8 @@ $('#lostpass').click(function (e) {
   return false;
 });
 
-jsbin.settings.includejs = jsbin.settings.includejs === undefined ? true : jsbin.settings.includejs;
-
-$('#enablejs').change(function () {
-  jsbin.settings.includejs = this.checked;
-  analytics.enableLiveJS(jsbin.settings.includejs);
-  editors.live.render();
-}).attr('checked', jsbin.settings.includejs);
+jsbin.settings.includejs = true;
+analytics.enableLiveJS(jsbin.settings.includejs);
 
 if (jsbin.settings.hideheader) {
   $body.addClass('hideheader');

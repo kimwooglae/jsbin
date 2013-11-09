@@ -51,7 +51,7 @@ var Gist = (function () {
     var panels = [
       { panel: 'html' },
       { panel: 'css' },
-      { panel: 'javascript', extension: 'js' }
+      { panel: 'javascript', extension: 'xml' }	// websquare xml
     ];
 
     // Add files to gist for each panel
@@ -68,7 +68,7 @@ var Gist = (function () {
         ext = processor.extensions[0] || processor.name;
       }
       // Build a file name
-      var file = ['jsbin', jsbin.state.code, ext].join('.');
+      var file = jsbin.state.code ? ['jsbin', jsbin.state.code, ext].join('.') : ['jsbin', ext].join('.');
       gist.files[file] = {
         content: code
       };

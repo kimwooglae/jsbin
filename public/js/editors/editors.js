@@ -372,7 +372,7 @@ var panelInit = {
     return new Panel('css', { editor: true, label: 'CSS' });
   },
   javascript: function () {
-    return new Panel('javascript', { editor: true, label: 'JavaScript' });
+    return new Panel('javascript', { editor: true, label: 'WebSquare' });
   },
   console: function () {
     // hide and show callbacks registered in console.js
@@ -382,7 +382,7 @@ var panelInit = {
     function show() {
       // var panel = this;
       if (panels.ready) {
-        renderLivePreview();
+//        renderLivePreview();
       }
     }
 
@@ -412,7 +412,7 @@ editors.live = panelInit.live();
 // jsconsole.init(); // sets up render functions etc.
 editors.live.settings.render = function (showAlerts) {
   if (panels.ready) {
-    renderLivePreview(showAlerts);
+//    renderLivePreview(showAlerts);
   }
 };
 
@@ -520,7 +520,7 @@ var editorsReady = setInterval(function () {
       editors.console.render();
     } else {
       // otherwise, force a render
-      renderLivePreview();
+//      renderLivePreview();
     }
 
 
