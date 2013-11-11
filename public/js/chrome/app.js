@@ -7,7 +7,7 @@ if (/gist(\/.*)?\/\d+/.test(window.location.pathname) && (!sessionStorage.getIte
     });
   };
 
-  if (editors.ready) {
+  if (panels.ready) {
     loadGist();
   } else {
     $document.on('jsbinReady', loadGist);
