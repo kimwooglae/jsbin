@@ -1,9 +1,9 @@
 {
   "env": "development",
-  "timezone": "UTC",
+  "timezone": "GMT+9",
   "url": {
-    "host": "localhost:3000",
-    "prefix": "/",
+    "host": "jsbin.inswave.com",
+    "prefix": "/jsbin/",
     "ssl": false,
     "static": false,
     "runner": false
