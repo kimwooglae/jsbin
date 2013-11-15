@@ -43,6 +43,7 @@
               <a data-desc="Use content from this bin when creating new bins" id="startingpoint" title="Set as starting code" class="button group" href="{{root}}/save" data-label="save-as-template">Save as template</a>
               <!-- <a data-desc="Reset to the original JS Bin starting point" id="cleartemplate" title="Reset to the original JS Bin starting template" class="button group" href="#clear-template" data-label="clear-template">Clear template</a> -->
               <a data-desc="How to embed a bin" target="_blank" title="How to embed a bin" data-label="how-to-embed" class="button group" href="http://learn.jsbin.com/task/how-can-i-embed-jsbin">How to embed</a>
+              <a data-desc="Collaborate" title="Collaborate" data-label="collaborate" class="button group" id="collaborate" href="#together_js">Collaborate</a>
             </div>
           </div>
         </div><!-- spacer (or not) DO NOT TOUCH ERE BE DRAGONS etc wat?
@@ -436,5 +437,20 @@ Include alerts, prompts &amp; confirm boxes">Run WebSquare</button>
 <script src="{{static}}/js/vendor/eventsource.js"></script>
 <script src="{{static}}/js/spike.js?{{version}}"></script>
 {{/live}}
+
+<script src="https://togetherjs.com/togetherjs.js"></script>
+<script>
+  $('#collaborate').click(function (e) {
+		TogetherJS(this);
+		return false;
+  });	
+</script>
+
+<!--
+<button id="collaborate" type="button">Collaborate</button>
+<script>
+document.getElementById("collaborate").addEventListener("click", TogetherJS, false);
+</script>
+-->
 </body>
 </html>
